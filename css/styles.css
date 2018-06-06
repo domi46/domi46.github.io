@@ -1,274 +1,226 @@
-/*---------------------------------------------------
- 	Projekt IET Technikerschule CSS Stylesheet
-----------------------------------------------------*/
+/* 
+	Technikerschule Erlangen
+	Projekt Informatiktechnik
+	
+	Dominik Schumm
+*/
 
-*{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+body {
+  display: flex; 
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -o-flex; 
+  flex-direction: column;
+  justify-content: center;
 }
 
-html{
-	font: normal 16px sans-serif;
-	color: #555;
+/* Setzt den Style für die Buttons */
+button {
+  margin-left: auto;
+  margin-bottom: 10px;
+  padding: 8px 16px;
+  border: none;
+  background: #333;
+  color: #f2f2f2;
+  text-transform: uppercase;
+  letter-spacing: .09em;
+  border-radius: 2px;
 }
 
-ul, nav{
+/* ---------- Navigation ----------*/
+.navigation {
 	list-style: none;
+	display: flex; 
+	display: -webkit-flex;
+    display: -moz-flex; 
+    display: -ms-flexbox;
+    display: -o-flex;
+  	
+	justify-content: flex-end;	
+	background: #ff0000;
+   	margin: 0px;
 }
 
-a{
-	text-decoration: none;
-	cursor: pointer;
-
-	opacity: 0.9;
+.navigation a {
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  color: white;
 }
 
-a:hover{
-	opacity: 1;
+/* ändert beim Mouseover über die Navigations links die Hintergrundfarbe*/
+.navigation a:hover {
+  background: #BDBDBD;
 }
 
-a.btn{
-	color: #fff;
-	border-radius: 4px;
-	text-transform: uppercase;
-	background-color: #2196F3;
-	font-weight: 800;
-	text-align: center;
-}
-
-hr{
-	width: 150px;
-	height: 2px;
-	background-color: #2196F3;
-	border: 0;
-	margin-bottom: 80px;
-}
-
-section{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding: 125px 100px;
-}
-
-@media (max-width: 1000px){
-
-	section{
-		padding: 100px 50px;
-	}
-
-}
-
-@media (max-width: 600px){
-
-	section{
-		padding: 80px 30px;
-	}
-
-}
-
-section h3.title{
-	color: #414a4f;
-	text-transform: capitalize; 
-	font: bold 32px 'Open Sans', sans-serif;
-	margin-bottom: 35px;
-	text-align: center;
-}
-
-section p{
-	max-width: 800px;
-	text-align: center;
-	margin-bottom: 35px;
-	padding: 0 20px;
-	line-height: 2;
-}
-
-ul.grid{
-	width: 100%;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-}
+/* ---------- Header ----------*/
 
 header{
-	z-index: 10;
+	
+  display: flex;
+  display: -webkit-flex;
+  display: -moz-flex; 
+  display: -ms-flexbox;
+  display: -o-flex;
+  flex-direction: column;
+  
+}
+
+#headerimg, img{	
 	width: 100%;
+}
+ 
+/* setzt die größe der Bilder auf 70%*/
+img{	
+	width: 70%;
+}
+	 
+/* ---------- Main ----------*/
+
+.main {
+  text-align: center;
+  padding: 1em;
+  
+}
+
+#highlight_r{
+	color: red;
+}
+
+/* ---------- Articel ----------*/
+.twoarticle {
+  display: flex;
+  display: -webkit-flex;
+  display: -moz-flex; 
+  display: -ms-flexbox;
+  display: -o-flex;
+  
+  flex-direction: row;
+  
+  padding: 0 5px 0px 5px; 
+}
+
+.article {
+  background: #efdf62; 
+  padding: 0 5px 0px 5px;  
+}
+
+.article-1 {
+  flex-grow: 1;
+  background-color: #e8ecf2;
+}
+
+.article-2 {  
+  flex-grow: 2;
+  margin-left: 10px;
+}
+
+/* ---------- Footer ----------*/
+footer {
+	background: #ff0000;
+	padding: 5px;
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	color: #fff;
-	padding: 35px 100px 0;
+	display: -webkit-flex;
+    display: -moz-flex; 
+    display: -ms-flexbox;
+    display: -o-flex;
+  
+	flex-direction: row;
+	
+    align-items: center;
+	bottom: 0;
+	left: 0;
+	position: relative;
+	width: 100%;
+	
 }
 
-header nav{
-	display: flex;
+.foot_1 {
+	
+  width: 100%;
+  flex-grow: 1;
+  order: 0;
+  display: flex;
+  justify-content: center;
 }
 
-header nav li{
-	margin: 0 15px;
+.foot_1 > a > img{
+	height: 32px;
+	width: 32px;
 }
 
-@media (max-width: 1000px){
-	header{
-		padding: 20px 50px;
-	}
+.foot_2 {  
+
+ width: 100%;
+  flex-grow: 1;
+  order: 1;
+  background-color: red;
+  text-align: center;
 }
 
-
-@media (max-width: 700px){
-	header{
-		flex-direction: column;		
-	}
-
-	header h2{
-		margin-bottom: 15px;
-	}
+.foot_3 {  
+ width: 100%;
+  flex-grow: 1;
+  order: 3;  
 }
 
-.hero h1{
-	font: bold 60px 'Open Sans', sans-serif;
-	margin-bottom: 15px;
+.foot_3 > form > p {
+	font-size: 12px;
 }
 
-.hero h3{
-	font: normal 28px 'Open Sans', sans-serif;
-	margin-bottom: 40px;
+/* ---------- ContactFormular ----------*/
+
+.contactformular {
+  background-color: #e8ecf2;
+  	
+}
+.contactformular form {
+  width: 100%;
 }
 
-.hero a.btn{
-	padding: 20px 46px;
-}
-
-@media (max-width: 800px){
-
-	.hero{
-		min-height: 600px;
-	}
-
-	.hero h1{
-		font-size: 48px;
-	}
-
-	.hero h3{
-		font-size: 24px;
-	}
-
-	.hero a.btn{
-		padding: 15px 40px;
-	}
-
-}
-
-/*--------------------
- 	Our Work Section
----------------------*/
-
-.оur-work{
-	background-color: #fff;
-}
-
-.our-work .grid li{
-	padding: 20px;
-	height: 350px;
-	border-radius: 3px;
-
-	background-clip: content-box;
-	background-size: cover;
-	background-position: center;
-	background-color: #333;
-}
-
-.our-work .grid li.small{
-	flex-basis: 40%;
-}
-
-.our-work .grid li.large{
-	flex-basis: 60%;
-}
-
-
-@media (max-width: 1000px){
-
-	.our-work .grid li.small,
-	.our-work .grid li.large{
-		flex-basis: 100%;
-	}
+.contactformular form textarea,
+.contactformular form input {
+  width: 75%;
 
 }
 
-/*----------------------
- 	Features Section
-----------------------*/
+/* ---------- Media ----------*/
 
-.features{
-	background-color: #f7f7f7;
+/* wirkt ab einer Größe < 800px */
+@media all and (max-width: 800px) {
+  .navigation {
+    justify-content: space-around; /* teilt den Abstand links und rechts der Navigation auf */
+  }
+  .twoarticle {
+	flex-direction: column;
+  }
+  .article-2 {
+	margin-top: 10px;
+	margin-left: 0px;
+  }
+	.article-1 {
+	margin-top: 10px;
+	margin-left: 0px;
+  }	
+	footer {
+	flex-direction: column;
+  }
 }
-
-.features .grid li{
-	padding: 0 30px;
-	flex-basis: 33%;
-	text-align: center;
+/* wirkt ab einer Größe < 600px */
+@media all and (max-width: 600px) {
+  .navigation {
+    flex-flow: column wrap;		/* Gibt an das die einzelnen spalten umgebrochen werden können */
+    padding: 0; 				/* Entfernt den abstand (außerhalb) der einzelnen Einträge */
+  }
+  
+  /* Ändert die Reihenfolge der Elemente */
+ .headerimg{ order:0;}
+ .navigation{ order:1;}
 }
-
-.features .grid li i{
-    font-size: 50px;
-    color: #2196F3;
-    margin-bottom: 25px;
-}
-
-.features .grid li h4{
-	color: #555;
-    font-size: 20px;
-    margin-bottom: 25px;
-}
-
-.features .grid li p{
-    margin: 0;
-}
-
-@media (max-width: 1000px){
-
-	.features .grid li{
-		flex-basis: 70%;
-		margin-bottom: 65px;
-	}
-
-	.features .grid li:last-child{
-		margin-bottom: 0;
-	}
-
-}
-
-
-@media (max-width: 600px){
-
-	.features .grid li{
-		flex-basis: 100%;
-	}
-
-}
-
-/*-------------
- 	Footer
--------------*/
-
-footer p{
-	text-transform: uppercase;
-	font-size: 14px;
-	color: rgba(255,255,255,0.6);
-	margin-bottom: 10px;
-}
-
-footer p a{
-	color: #fff;
-}
-
-@media (max-width: 700px){
-
-	footer{
-		padding: 80px 15px;
-	}
-
-}
-
+  
+ /* Sortierung ändern .. 
+ .article-2{ order:3;}
+ .article-3{ order:1;}
+ .article-4{ order:0;}
+ */
